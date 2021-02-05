@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background-color: lightgray;
@@ -83,6 +84,7 @@ body{
     color: 	#202020;
     font-weight: bold;
     text-decoration: none;
+    text-transform: uppercase;
     padding: 5px 30px;
     border-radius: 30px;
     border: 1px solid orange;
@@ -157,8 +159,9 @@ body{
     margin-top: 100px;
 }
 .top h1{
+    font-size: 35px;
     font-weight: 300;
-    color: #444;
+    color: #555;
 }
 
 .top ul{
@@ -173,6 +176,7 @@ body{
     color: #d89b00;
     font-size: 16px;
     padding: 10px;
+    transition: .3s ease;
 }
 .top ul a:hover{
     color: #444;
@@ -253,7 +257,6 @@ body{
     color: lightgray;
 }
 .box .btn {
-    position: initial;
     margin-top: 50px;
 }
 .items img{
@@ -305,8 +308,7 @@ body{
 
 }
 .box2 div{
-    position: initial;
-    margin-top: 110px;
+    margin-top: 80px;
 }
 .app{
     display: flex;
@@ -340,8 +342,14 @@ body{
     font-size: 18px;
     color: white;
     padding: 5px 10px;
-    border: 2px solid white;
+    margin-right: 10px;
+    border: 1px solid white;
     border-radius: 10px;
+    transition: .3s ease;
+}
+.store a:hover{
+    background-color:#d89b00;
+    border: 1px solid #d89b00;
 }
 /* End Application */
 /* Media */
@@ -403,7 +411,6 @@ body{
     padding-left: 20px;
 }
 .us .btn{
-    text-transform: uppercase;
     font-size: 15px;
 }
 .media img{
@@ -508,6 +515,10 @@ body{
     padding: 10px 40px 10px 0px;
     color: white;
     text-transform: uppercase;
+    transition: .3s ease;
+}
+#footer .top ul a:hover{
+    color: #d89b00;
 }
 #footer .top a{
     font-size: 15px;
@@ -515,6 +526,10 @@ body{
     text-decoration: none;
     font-family: "Oswald";
     text-transform: uppercase;
+    transition: .3s ease;
+}
+#footer .top a:hover{
+    color: #d89b00;
 }
 #footer .top h1{
     font-size: 20px;
@@ -535,5 +550,30 @@ body{
     font-family: "Oswald";
     color: white;
     padding:0px 40px;
+}
+.up{
+    position: fixed;
+    bottom: 15px;
+    right: -100px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color:royalblue;
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease;
+}
+.up img{
+    position: absolute;
+    z-index: 0;
+    color: white;
+    width: 30%;
+    transition: .3s ease;
+    display: block;
+}
+.up:hover{
+    opacity: 1;
 }
 /* End Footer */
