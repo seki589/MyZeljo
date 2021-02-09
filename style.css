@@ -299,14 +299,13 @@ body{
     flex-direction: column;
     margin: auto;
     position: relative;
-    background-image: url(images/delivery.jpg);
+    background-image: url(images/baner-website.png);
     background-size: cover;
     z-index: 1;
 }
 #delivery::after{
     content: "";
-    background-color:black;
-    opacity: 0.2;
+    background-color:rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
     height: 100%;
@@ -329,7 +328,7 @@ body{
     color: #d89b00;
 }
 .box h1{
-    font-size: 30px;
+    font-size: 25px;
     color: lightgray;
     margin-bottom: 30px;
 }
@@ -750,6 +749,7 @@ body{
     #main{
         width: 90%;
         height: 90vh;
+    }
     .main{
         width: 80%;
     }
@@ -837,6 +837,10 @@ body{
     }
     .media img{
         width: 150px;
+    }
+    .impresum div{
+        display: flex;
+        flex-wrap: nowrap;
     }
     .us .btn{
         font-size: 15px;
