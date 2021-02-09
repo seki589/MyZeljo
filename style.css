@@ -510,6 +510,7 @@ body{
     margin: auto;
     position: relative;
     background-color: white;
+    margin-bottom: 30px;
 }
 #blog .bot{
     margin-top: 20px;
