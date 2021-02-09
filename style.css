@@ -42,11 +42,6 @@ body{
     right: 0;
 }
 
-/* .menu li{
-    width: 100%;
-    align-items: center;
-    display: inline-block;
-} */
 .nav-link{
     font-weight: 600;
     font-size: 12px;
@@ -127,7 +122,7 @@ body{
 /* Main */
 #main{
     width: 90%;
-    height: 95vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -161,7 +156,7 @@ body{
 .main h1{
     color: white;
     font-size: 25px;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 .btn{
     background-color: orange;
@@ -752,6 +747,9 @@ body{
     .menu li a{
         font-size: 14px;
     }
+    #main{
+        width: 90%;
+        height: 90vh;
     .main{
         width: 80%;
     }
