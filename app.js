@@ -3,21 +3,30 @@ const menu = document.querySelector('.menu ');
 const menuList = document.querySelector('.menu, li, a ');
 const upButton = document.querySelector(".up");
 const clButton = document.querySelector('.sub');
+const opButton = document.querySelector('.down');
 const police = document.querySelector('.police');
+const private = document.querySelector('.rght')
+
 
 menuIcon.addEventListener('click', () => {
 menu.classList.toggle('change');
 menuIcon.classList.toggle('change');
-})
+});
 
 menuList.addEventListener('click', () => {
     menu.classList.toggle('change');
     menuIcon.classList.toggle('change');
+});
+
+private.addEventListener('click', () => {
+    opButton.classList.toggle('rotate');
+    police.classList.toggle('open')
 })
 
-clButton.addEventListener('click', () => {
-    police.classList.toggle('close');
-})
+opButton.addEventListener('click', () => {
+    opButton.classList.toggle('rotate');
+    police.classList.toggle('open');
+});
 
 document.addEventListener('scroll', () => {
     var scroll_position = window.scrollY;
