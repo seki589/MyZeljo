@@ -262,7 +262,7 @@ body{
     font-family: "Oswald";
     text-decoration: none;
     color: #d89b00;
-    font-size: 12px;
+    font-size: 11px;
     padding: 3px;
     transition: .3s ease;
 }
@@ -458,6 +458,7 @@ body{
     position: relative;
     background-color: white;
     opacity: 0.8;
+    z-index: 1;
 }
 #media h3{
     font-family:"Oswald";
@@ -542,7 +543,7 @@ body{
 }
 #blog .item img{
     width: 100%;
-    height: 200px;
+    height: 210px;
     background-color: white;
 }
 .item h2{
@@ -706,7 +707,7 @@ body{
     position: relative;
 }
 #footer h3{
-    font-size: 10px;
+    font-size: 8px;
     font-family: "Oswald";
     color: white;
     padding:10px 20px;
@@ -774,6 +775,9 @@ body{
     }
     #footer .top{
         height: 30vh;
+    }
+    #footer h3{
+        font-size: 12px;
     }
     .our{
         display: initial;
