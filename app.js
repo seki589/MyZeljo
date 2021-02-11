@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector('.toggle');
 const menu = document.querySelector('.menu ');
-const menuList = document.querySelector('.menu, li, a ');
+const menu_item = document.querySelectorAll('.menu .bar .nav-link');
+const menu_b = document.querySelector('.menu-b');
 const upButton = document.querySelector(".up");
 const clButton = document.querySelector('.sub');
 const opButton = document.querySelector('.down');
@@ -11,11 +12,22 @@ const private = document.querySelector('.rght')
 menuIcon.addEventListener('click', () => {
 menu.classList.toggle('change');
 menuIcon.classList.toggle('change');
+menu_b.classList.toggle('change');
 });
 
-menuList.addEventListener('click', () => {
+menu_b.addEventListener('click', () => {
     menu.classList.toggle('change');
     menuIcon.classList.toggle('change');
+    menu_b.classList.toggle('change');   
+});
+
+menu_item.forEach((item) => {
+    item.addEventListener('click',() => {
+        menu.classList.toggle('change');
+        menuIcon.classList.toggle('change');
+        menu_b.classList.toggle('change');
+    })
+    
 });
 
 private.addEventListener('click', () => {
