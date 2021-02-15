@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: lightgray;
+    background-color:lightgray;
 }
 /* Header */
 #header{
@@ -37,7 +37,7 @@ body{
     padding: 50px 30px;
     z-index: 99;
     background-color: rgba(255, 255, 255, 1);
-    transition: .5s ease-out;
+    transition: .5s ease-in-out;
     caret-color: transparent;
 }
 .change {
@@ -74,7 +74,7 @@ body{
     position: absolute;
     left: 0;
     transform: scaleX(0);
-    transition: transform .5s;
+    transition: transform .5s ease-in;
 }
 .nav-link::after{
     bottom: 0;
@@ -104,9 +104,9 @@ body{
 }
 .line{
     width: 100%;
-    height: 3px;
+    height: 4px;
     background-color: orange;
-    transition: all .5s;
+    transition: all .5s ease-in;
 }
 .change .line-1{
     transform: rotateZ(-45deg) translate(-8px, 6px);
@@ -540,9 +540,47 @@ body{
 #blog .bot{
     margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
+    background-color: white;
 }
-#blog .item {
-    width: 300px;
+.items{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.items.open-tab{
+    position: fixed;
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.items .recepies{
+    display: flex;
+    flex: 1;
+    margin: 20px;
+    margin-left: 0px;
+    padding: 20px;
+    overflow: scroll;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    position: absolute;
+    z-index: -100;
+    transform-origin: left;
+    transform: scaleX(0) translateX(-300px);
+    opacity: 0;
+    transition: .5s ease-in;
+}
+.items .recepies.open-tab{
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: scaleX(1) translateX(0px);
+}
+.items .item {
+    max-width: 300px;
     height: 420px;
     display: flex;
     flex-direction: column;
@@ -552,9 +590,11 @@ body{
     padding: 0%;
     margin: 20px;
 }
+
+
 #blog .item img{
     width: 100%;
-    height: 210px;
+    height: 190px;
     background-color: white;
 }
 .item h2{
@@ -568,6 +608,8 @@ body{
 .item .btn{
     margin-left: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
 }
 #blog .pull img{
     width: 30%;
@@ -601,7 +643,7 @@ body{
 .impresum{
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 5%;
 }
@@ -610,7 +652,6 @@ body{
 .impresum div{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 10px;
 }
 .impresum h1{
@@ -620,10 +661,10 @@ body{
 }
 .impresum h2{
     font-family:"Oswald";
-    font-size:25px;
+    font-size:30px;
 }
 .impresum p{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -642,6 +683,7 @@ body{
     margin: auto;
     position: relative;
     opacity: 0.9;
+    display: none;
 }
 #footer .top{
     display: flex;
@@ -739,7 +781,7 @@ body{
 }
 .up img{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     color: white;
     width: 30%;
     transition: .3s ease;
@@ -749,6 +791,119 @@ body{
     opacity: 1;
 }
 /* End Footer */
+/* Footer2 */
+#footer2{
+    display: flex;
+    flex-direction: column; 
+    background-image: url(images/footer.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    z-index: 0;
+  }
+  #footer2::after{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+  }
+   .top1 {
+    display: flex;
+    flex-direction: row;
+    margin: 0% 6%;
+  }
+  .logo1 img{
+      height: 80px;
+      width: 90px;
+  }
+  .top1 .logo1{
+    padding: 50px 0;
+    margin-right: 50px;
+    flex: 1;
+  }
+  .logo1 p{
+    font-size: 14px;
+    color: black;
+  }
+  .top1 .info{
+    padding: 50px 0px;
+    margin-right: 50px;
+    flex: 1;
+    display: none;
+  }
+  .info li{
+    border-bottom: none;
+    padding: 5px;
+    list-style: none;
+  }
+  .info a{
+    text-decoration: none;
+    color: black;
+  }
+  .info a:hover{
+    color: orange;
+  }
+  
+  .top1 .hours{
+    padding: 50px 0px;
+    flex: 1;
+    display: none;
+  }
+  .open h2{
+    font-size: 14px;
+    color: black;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .open span{
+    font-weight: bold;
+  }
+  .top1 h1{
+    font-family: "Oswald";
+    font-size: 25px;
+    color: orange;
+    font-weight: 400;
+    margin: 10px 0px;
+  }
+  .bot1{
+    display: flex;
+    margin: 0% 2%;
+    padding: 10px 0px;
+    border-top: 1px solid #777;
+  }
+  .bot1 .soc{
+    flex: 4;
+    text-align: center;
+    position: relative;
+    margin-left: 15%;
+  }
+  .soc a{
+    margin-left: 10px;
+  }
+  .bot1 .copy{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .copy p{
+    font-size: 10px;
+    font-weight: 500;
+    color: black;
+    padding: 0 5px;
+  }
+  .soc img{
+    width: 30px;
+  }
+  .soc img:hover{
+    transform: scale(1.1);
+    transition: .3s ease;
+  }
 
 @media only screen and (min-width: 768px){
     #header{
@@ -768,7 +923,7 @@ body{
     }
     .menu{
         width: 40vw;
-        border-radius: 0 0 0 60%;
+        border-radius: 10% 0 0 60%;
     }
     .nav-link{
         font-size: 16px;
@@ -792,6 +947,12 @@ body{
     }
     .our{
         display: initial;
+    }
+    .top1 .info{
+        display: block;
+    }
+    .top1 .hours{
+        display: block;
     }
     
 }
@@ -882,9 +1043,9 @@ body{
     .us .btn{
         font-size: 15px;
     }
-    .about{
+    /* .about{
         padding: 40px 0px 0px 120px;
-    }
+    } */
     .acc{
         padding: 40px 0px 0px 40px;
     }

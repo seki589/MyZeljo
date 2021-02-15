@@ -6,7 +6,10 @@ const upButton = document.querySelector(".up");
 const clButton = document.querySelector('.sub');
 const opButton = document.querySelector('.down');
 const police = document.querySelector('.police');
-const private = document.querySelector('.rght')
+const private = document.querySelector('.rght');
+const theButton = document.querySelectorAll('.item .btn');
+const recepies = document.querySelector('.items .recepies');
+const items = document.querySelector('.items')
 
 
 menuIcon.addEventListener('click', () => {
@@ -20,6 +23,14 @@ menu_b.addEventListener('click', () => {
     menuIcon.classList.toggle('change');
     menu_b.classList.toggle('change');   
 });
+
+// theButton.forEach((button) => {
+//     button.addEventListener('click', () => {
+//         recepies.classList.toggle('open-tab');
+//         items.classList.toggle('open-tab');
+//         const openRecepies = button.getAttribute("open");
+//     })
+// })
 
 menu_item.forEach((item) => {
     item.addEventListener('click',() => {
