@@ -8,8 +8,9 @@ const opButton = document.querySelector('.down');
 const police = document.querySelector('.police');
 const private = document.querySelector('.rght');
 const theButton = document.querySelectorAll('.item .btn');
-const recepies = document.querySelector('.items .recepies');
-const items = document.querySelector('.items')
+const closeBtn = document.querySelectorAll('.hide .btn');
+const recepies = document.querySelector('.items-1 .hide');
+const ok = document.querySelector('#cookies .btn');
 
 
 menuIcon.addEventListener('click', () => {
@@ -24,13 +25,18 @@ menu_b.addEventListener('click', () => {
     menu_b.classList.toggle('change');   
 });
 
-// theButton.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         recepies.classList.toggle('open-tab');
-//         items.classList.toggle('open-tab');
-//         const openRecepies = button.getAttribute("open");
-//     })
-// })
+theButton.forEach((button) => {
+    button.addEventListener('click', () => {
+        recepies.classList.toggle('open-tab');
+        
+    })
+})
+closeBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        recepies.classList.toggle('open-tab');
+        
+    })
+})
 
 menu_item.forEach((item) => {
     item.addEventListener('click',() => {
@@ -50,6 +56,9 @@ opButton.addEventListener('click', () => {
     opButton.classList.toggle('rotate');
     police.classList.toggle('open');
 });
+ok.addEventListener('click', () =>{
+    document.getElementById('cookies').style.bottom = "-200px";
+})
 
 document.addEventListener('scroll', () => {
     var scroll_position = window.scrollY;

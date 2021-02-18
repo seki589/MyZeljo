@@ -162,7 +162,7 @@
             <h1>Eine kulinarische Reise durch den Balkan</h1>
         </div>
         <div class="bot">
-            <div class="items">
+            <div class="items-1">
                 <div class="item">
                     <img src="images/img55.jpg" alt="">
                     <h2>Ćevapčići</h2>
@@ -171,50 +171,79 @@
                     </p>
                     <button data-cmd="open"  tipe= "button" class="btn">Read More</button>
                 </div>
-                <div class="recepies">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Architecto ducimus at corrupti eveniet fugiat esse vitae 
-                        velit laboriosam. Blanditiis quod nam eius? Eveniet quis 
-                        mollitia, id minima aut dolor consectetur!
-                    </p>
+                <div class="hide">
+                    <h2>Ćevapčići</h2>
+                    <div class="recepies" data-open="open">
+                        <p>Za dobre ćevape potrebno vam je 3 dana vremena i kvalitetno meso.
+                        </p>
+                        <h3>1. Dan </h3>
+                        <h3>Nabavka mesa i soljenje istog.</h3>
+                        <p>• Potrebno vam je goveđe meso sa što manje masnoće tako da bi ćevap zadržao strukturu prilikom pečenja.</p>
+                        <p>• Za slatkoću i sočnost ćevapa potrebno vam je teleće meso sto masnije. Što masnije to bolje.</p>
+                        <p>Omjer:75% govedine i 25% teletine.
+                           Ovisno o količini koju pravite potrebna vam je i so sa kojom ćete nasoliti meso.
+                            Ako imate 10kg mesa onda upotrijebite samo 140g soli za kompletnu masu.
+                            Nasolite meso tako da so lijepo raspodijelite sa rukama tako sto ćete miješati meso i sa svake strane ga nasoliti.
+                        </p>
+                        <h3>2. Dan</h3>
+                        <p>Danas meljete meso i miješate ga sa ostalim začinima.
+                           Samljevenoj masi dodati sljedeće:
+                        </p>
+                        <p>20 gr bibera</p>
+                        <p>60 gr mljevenog bijelog luka</p>
+                        <p>25 gr Vegete</p>
+                        <p>10 gr crvene slatke paprike</p>
+                        <p>200gr sode</p>
+                        <p>3 stare semele koje ćete izmrviti</p>
+                        <p>0,5 l kisele vode (možda i manje zavisi od mesa i mase koja ne smije biti vodenasta)</p>
+                        <p>Ovo ćete sve miješati u mješalici ili u mašini za tijesto ili ručno najmanje 10 min tako da se masa sva ujedini i počne dobivati strukturu paštete ili narezka.
+                           Ovu masu opet pokrijete folijom i opet u frižider na sto manju temperaturu (ne ispod nule).
+                            Ostavite meso pokriveno sa strech folijom u frižideru na sto manjoj temperaturi do sutra.
+                        </p>
+                        <h3>3. Dan</h3>
+                        <p>Masa ide opet na kratko miješanje od 3-4 min.
+                          Poslije toga masa je spremna i možete je početi izlijevati u ćevape. Optimalno sa špricom / topom za ćevape ili kod kuće ako imate špricu za tulumbe.
+                          Ćevape možete praviti po vašoj veličini. Inače optimalna porcija je 200 – 220 g za 10 ćevapa.
+                       </p>
+                      <p>Prijatno!</p>
+                    </div>
+                    <button tipe= "button" class="btn">Close</button>
                 </div>
             </div>
-            <div class="items">
+            <div class="items-1">
                 <div class="item">
                     <img src="images/img66.jpg" alt="">
                     <h2>Schoko-Himbeere Torte</h2>
                     <p>Lassen Sie ihren Gaumen mit desem unwidersvehlichem.. </p>
                     <button data-cmd="open" class="btn">Read More</button>
                 </div>
-                <div class="recepies">
+                <!-- <div class="recepies" data-open="open">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem Lorem Lorem Loremipsum dolor sit amet consectetur adipisicing elit.
                         Architecto ducimus at corrupti eveniet fugiat esse vitae 
                         velit laboriosam. Blanditiis quod nam eius? Eveniet quis 
                         mollitia, id minima aut dolor consectetur!
                     </p>
-                </div>
+                </div> -->
             </div>
-            <div class="items">
+            <div class="items-1">
                 <div class="item">
                     <img src="images/img77.jpg" alt="">
                     <h2>Raffaello Torte</h2>
                     <p>Lassen Sie ihren Gaumen mit diesem unwidersvehlichem..</p>
                     <button data-cmd="open" class="btn">Read More</button>
                 </div>
-                <div class="recepies">
+                <!-- <div class="recepies">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Architecto ducimus at corrupti eveniet fugiat esse vitae 
                         velit laboriosam. Blanditiis quod nam eius? Eveniet quis 
                         mollitia, id minima aut dolor consectetur!
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
-        <span class="pull down"><img src="images/down.png" alt=""></span>
-        <a  href=""></a>
+        <button class="pull down"><img src="images/down.png" alt=""></button>
     </div>
     <!-- End Blog -->
     <!-- Impresum -->
@@ -999,8 +1028,7 @@
         <div class="bot">
             <h3>@Copyrights 2021-All Rights Reserved</h3>
             <h3>CREATED BY TECH 387</h3>
-        </div>
-        <a class="up"href="#"><img src="images/up.png" alt=""></a>
+        </div>       
     </div>
     <!-- End Footer -->
    <!-- Footer2 -->
@@ -1052,7 +1080,17 @@
         <p>CREATED BY TECH 387</p>
       </div>
     </div>
+    <a class="up"href="#"><img src="images/up.png" alt=""></a>
   </div>
+  <div id="cookies">
+    <div>
+        <p>
+            We use cookies to make sure you can have the best experience on our website. 
+            If you continue to use this site we assume that you will be happy with it.
+        </p>
+    </div>
+    <button  class="btn" >Ok</button>
+</div>
     <script src="./app.js"></script>
 </body>
 </html>

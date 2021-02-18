@@ -185,6 +185,8 @@ body{
     transition: .3s ease;
     z-index: 1;
     caret-color: transparent;
+    cursor: pointer;
+    outline: none;
 }
 .btn:hover{
     border: 1px solid orange;
@@ -207,6 +209,7 @@ body{
     transition: .3s ease;
     cursor: pointer;
     caret-color: transparent;
+    outline: none;
 }
 .rotate{
     transform: rotate(180deg);
@@ -298,11 +301,16 @@ body{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
+    overflow: hidden;
+}
+.item img:hover{
+    transform: scale(1.1);
 }
 .item img{
     width: 100%;
     height: 200px;
     color: white;
+    transition: .5s ease;
 }
 .item h2{
     font-family: "Oswald";
@@ -322,6 +330,7 @@ body{
     position: relative;
     background-image: url(images/baner-website.png);
     background-size: cover;
+    background-position: center;
     z-index: 1;
     
 }
@@ -541,45 +550,67 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
+    z-index: 1;
     background-color: white;
 }
-.items{
+.items-1{
     display: flex;
-    flex-direction: row;
-    position: relative;
+    flex-direction: column;
 }
-.items.open-tab{
-    position: fixed;
-    z-index: 2;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.items .recepies{
-    display: flex;
-    flex: 1;
-    margin: 20px;
-    margin-left: 0px;
-    padding: 20px;
-    overflow: scroll;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: white;
+.items-1 .hide{
     position: absolute;
-    z-index: -100;
-    transform-origin: left;
-    transform: scaleX(0) translateX(-300px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 90%;
+    height: 420px;
+    z-index: -1;
+    transform: scale(0.8);
     opacity: 0;
-    transition: .5s ease-in;
+    left: 0;
+    margin: 20px 5%;
+    border-radius: 10px;
+    transition: all .5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.items .recepies.open-tab{
-    position: relative;
+.items-1 .hide.open-tab{
     z-index: 2;
+    transform: scale(1);
     opacity: 1;
-    transform: scaleX(1) translateX(0px);
+    transition: all .5s;
 }
-.items .item {
+.hide h2{
+    font-family: "Oswald";
+    text-transform: uppercase;
+    color: #d89b00;
+    padding:10px 20px;
+}
+.hide .btn{
+    margin: 10px 20px;
+}
+.items-1 .recepies{
+    overflow: scroll;
+    height: 80%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+.items-1 .recepies::after{
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(images/img77.jpg);
+    background-size: cover;
+    opacity: .1;
+    position: absolute;
+    z-index: -1;
+}
+
+.items-1 .item {
     max-width: 300px;
     height: 420px;
     display: flex;
@@ -608,9 +639,9 @@ body{
 .item .btn{
     margin-left: 20px;
     margin-bottom: 20px;
-    cursor: pointer;
-    outline: none;
+    cursor: pointer;   
 }
+
 #blog .pull img{
     width: 30%;
     margin: auto;
@@ -802,8 +833,8 @@ body{
     width: 90%;
     margin: auto;
     z-index: 0;
-  }
-  #footer2::after{
+}
+#footer2::after{
     content: "";
     top: 0;
     left: 0;
@@ -812,7 +843,7 @@ body{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: -1;
-  }
+}
    .top1 {
     display: flex;
     flex-direction: row;
@@ -904,6 +935,21 @@ body{
     transform: scale(1.1);
     transition: .3s ease;
   }
+
+  #cookies{
+      position: fixed;
+      display: flex;
+      align-items: center;
+      background-color: royalblue;
+      bottom: 0;
+      left: 5%;
+      right: 5%;
+      width: 90%;
+      z-index: 100;
+      padding: 10px;
+      transition: .5s ease;
+  }
+
 
 @media only screen and (min-width: 768px){
     #header{
