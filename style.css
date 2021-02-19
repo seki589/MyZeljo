@@ -830,7 +830,7 @@ body{
     background-position: center;
     background-size: cover;
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
     z-index: 0;
 }
@@ -892,8 +892,10 @@ body{
     font-weight: 300;
     margin-bottom: 10px;
   }
-  .open span{
+  .open a{
     font-weight: bold;
+    text-decoration: none;
+    color: black;
   }
   .top1 h1{
     font-family: "Oswald";
@@ -942,12 +944,14 @@ body{
       align-items: center;
       background-color: royalblue;
       bottom: 0;
-      left: 5%;
-      right: 5%;
-      width: 90%;
+      width: 100%;
       z-index: 100;
       padding: 10px;
+      border-radius: 10px 10px 0 0;
       transition: .5s ease;
+  }
+  #cookies p{
+      font-size: 14px;
   }
 
 
@@ -964,7 +968,7 @@ body{
     #media,
     #blog,
     .police,
-    #footer{
+    #footer2{
         width: 90%;
     }
     .menu{
@@ -999,6 +1003,15 @@ body{
     }
     .top1 .hours{
         display: block;
+    }
+
+    #cookies{
+        left: 5%;
+        right: 5%;
+        width: 90%;
+    }
+    #cookies p{
+        font-size: 16px;
     }
     
 }
