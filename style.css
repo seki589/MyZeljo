@@ -37,7 +37,7 @@ body{
     padding: 50px 30px;
     z-index: 99;
     background-color: rgba(255, 255, 255, 1);
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
     caret-color: transparent;
 }
 .change {
@@ -328,7 +328,7 @@ body{
     flex-direction: column;
     margin: auto;
     position: relative;
-    background-image: url(images/baner-website.png);
+    background-image: url(images/baner-2_720.png);
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -336,7 +336,7 @@ body{
 }
 #delivery::after{
     content: "";
-    box-shadow: inset 700px 0px 100px 0px rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
     height: 100%;
@@ -360,11 +360,11 @@ body{
 }
 .box h1{
     font-size: 25px;
-    color: lightgray;
+    color: white;
     margin-bottom: 30px;
 }
 .box p{
-    color: lightgray;
+    color: white;
 }
 .box .btn {
     margin-top: 50px;
@@ -572,7 +572,7 @@ body{
     left: 0;
     margin: 20px 5%;
     border-radius: 10px;
-    transition: all .5s;
+    transition: all .3s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .items-1 .hide.open-tab{
