@@ -568,6 +568,7 @@ body{
     top: 40px;
     width: 100%;
     opacity: 0;
+    z-index: 2;
     margin-top: 20px;
     border-radius: 0px;
     transition: all .3s ease-in-out;
@@ -575,9 +576,7 @@ body{
 }
 .items-1 .hide.open-tab{
     left: 0;
-    z-index: 2;
     opacity: 1;
-    /* transition: all .3s; */
 }
 .hide h2{
     font-family: "Oswald";
@@ -606,6 +605,11 @@ body{
     opacity: .1;
     position: absolute;
     z-index: -1;
+}
+.recepies h3{
+    font-size: 17px;
+    font-weight: 600;
+    padding: 5px 0;
 }
 
 .items-1 .item {
