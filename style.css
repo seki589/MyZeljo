@@ -542,15 +542,14 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
+    z-index: 2;
     position: relative;
-    z-index: 1;
     background-color: white;
 }
 #blog .bot{
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
-    z-index: 1;
     background-color: white;
 }
 .items-1{
@@ -558,28 +557,27 @@ body{
     flex-direction: column;
 }
 .items-1 .hide{
-    position: absolute;
+    position: fixed;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: baseline;
-    width: 90%;
-    height: 420px;
-    z-index: -1;
-    transform: scale(0.8);
+    height: 90vh;
+    left: -100%;
+    top: 40px;
+    width: 100%;
     opacity: 0;
-    left: 0;
-    margin: 20px 5%;
-    border-radius: 10px;
-    transition: all .3s;
+    margin-top: 20px;
+    border-radius: 0px;
+    transition: all .3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .items-1 .hide.open-tab{
+    left: 0;
     z-index: 2;
-    transform: scale(1);
     opacity: 1;
-    transition: all .5s;
+    /* transition: all .3s; */
 }
 .hide h2{
     font-family: "Oswald";
@@ -593,7 +591,7 @@ body{
 .items-1 .recepies{
     overflow: scroll;
     height: 80%;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     z-index: 1;
 }
@@ -639,12 +637,15 @@ body{
 .item .btn{
     margin-left: 20px;
     margin-bottom: 20px;
-    cursor: pointer;   
+    cursor: pointer; 
 }
 
 #blog .pull img{
     width: 30%;
     margin: auto;
+}
+#blog .pull{
+    z-index: 1;
 }
 
 /* End Blog */
@@ -988,6 +989,11 @@ body{
     .main h1{
         font-size: 35px;
         margin-bottom: 120px;
+    }
+    .items-1 .hide{
+        width: 90%;
+        margin-top: 0px;
+        margin: 20px 5%;
     }
     #footer .top{
         height: 30vh;

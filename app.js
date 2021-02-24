@@ -7,9 +7,8 @@ const clButton = document.querySelector('.sub');
 const opButton = document.querySelector('.down');
 const police = document.querySelector('.police');
 const private = document.querySelector('.rght');
-const theButton = document.querySelectorAll('.item .btn');
+const theButton = document.querySelectorAll('[data-cmd]');
 const closeBtn = document.querySelectorAll('.hide .btn');
-const recepies = document.querySelector('.items-1 .hide');
 const ok = document.querySelector('#cookies .btn');
 
 
@@ -25,16 +24,18 @@ menu_b.addEventListener('click', () => {
     menu_b.classList.toggle('change');   
 });
 
-theButton.forEach((button) => {
+theButton.forEach(button => {
     button.addEventListener('click', () => {
-        recepies.classList.toggle('open-tab');
-        
+        const recepiesSrc = button.closest(".items-1 ");
+        const recepies = recepiesSrc.querySelector('.hide');
+        recepies.classList.toggle('open-tab')  
     })
 })
 closeBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
-        recepies.classList.toggle('open-tab');
-        
+        const recepiesSrc = btn.closest(".items-1 ");
+        const recepies = recepiesSrc.querySelector('.hide');
+        recepies.classList.toggle('open-tab')   
     })
 })
 
