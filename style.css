@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
     scroll-behavior: smooth;
+    caret-color: transparent;
 }
 body{
     background-color:lightgray;
@@ -143,7 +144,7 @@ body{
     flex-direction: column;
     margin: auto;
     position: relative;
-    background-image: url(images/img1.jpg);
+    background-image: url(images/pita-baner.jpg);
     background-size: cover;
     background-position: center;
     z-index: 2;
@@ -412,7 +413,7 @@ body{
     font-size: 40px;
     font-weight: 300;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .box2 p{
     color: #555;
@@ -420,7 +421,7 @@ body{
 
 }
 .box2 div{
-    margin-top: 80px;
+    margin-top: 250px;
 }
 .app{
     display: flex;
@@ -439,6 +440,10 @@ body{
     margin-top: 40px;
     text-align: center;
 }
+.app .box .phone img{
+    width: 100%;
+    height: 500px;
+}
 .box img{
     margin-bottom: -5px;
     margin-right: 10px;
@@ -448,9 +453,8 @@ body{
     margin-bottom: 10px;
 }
 .store{
-    margin-top: 50px;
-    margin-bottom: 0px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .store a{
@@ -1075,7 +1079,7 @@ body{
         padding: 10px;
     }
     .app .box{
-        padding-left:180px;
+        margin: auto;
     }
     .box{
         width: 100%;
@@ -1088,7 +1092,7 @@ body{
         padding: 80px;
     }
     .store{
-        margin-bottom: -60px;
+        /* margin-bottom: -60px; */
     }
     .store a{
         font-size: 18px;
@@ -1112,9 +1116,6 @@ body{
     .us .btn{
         font-size: 15px;
     }
-    /* .about{
-        padding: 40px 0px 0px 120px;
-    } */
     .acc{
         padding: 40px 0px 0px 40px;
     }
