@@ -443,7 +443,6 @@ body{
 .app .box .phone img{
     height: 450px;
     transition: .3s ease;
-    cursor: pointer;
 }
 .app .box .phone img:hover{
     transform: scale(1.1);
