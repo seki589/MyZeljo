@@ -428,7 +428,7 @@ body{
     flex: 1;
     flex-direction: column; 
     justify-content: space-between;
-    background-color: royalblue;
+    background-image: linear-gradient( #009FFD, #2A2A72);
 }
 .app .png{
     width: 100%;
@@ -443,6 +443,11 @@ body{
 .app .box .phone img{
     width: 100%;
     height: 450px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.app .box .phone img:hover{
+    transform: scale(1.1);
 }
 .box img{
     margin-bottom: -5px;
