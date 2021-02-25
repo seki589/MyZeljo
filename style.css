@@ -570,14 +570,13 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: baseline;
-    height: 90vh;
+    height: 100vh;
     left: -100%;
-    top: 40px;
+    top: 0px;
     width: 100%;
     opacity: 0;
     z-index: 2;
-    margin-top: 20px;
-    border-radius: 0px;
+    margin-top: 0px;
     transition: all .3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -590,9 +589,10 @@ body{
     text-transform: uppercase;
     color: #d89b00;
     padding:10px 20px;
+    margin-top: 60px;
 }
 .hide .btn{
-    margin: 10px 20px;
+    margin: 10px 20px 20px 20px;
 }
 .items-1 .recepies{
     overflow: scroll;
@@ -1004,7 +1004,7 @@ body{
     .items-1 .hide{
         width: 90%;
         margin-top: 0px;
-        margin: 20px 5%;
+        margin: 0px 5%;
     }
     #footer .top{
         height: 30vh;
