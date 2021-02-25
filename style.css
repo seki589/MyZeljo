@@ -441,12 +441,11 @@ body{
     text-align: center;
 }
 .app .box .phone img{
-    width: 100%;
     height: 450px;
     transition: .3s ease;
     cursor: pointer;
 }
-.app .box .phone img:hover{
+.app .box .phone:hover img{
     transform: scale(1.1);
 }
 .box img{
