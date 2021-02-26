@@ -584,6 +584,12 @@ body{
     left: 0;
     opacity: 1;
 }
+.hide .test{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .hide h2{
     font-family: "Oswald";
     text-transform: uppercase;
@@ -592,7 +598,10 @@ body{
     margin-top: 60px;
 }
 .hide .btn{
-    margin: 10px 20px 20px 20px;
+    font-size: 20px;
+    padding: 0px 10px;
+    margin-top: 60px;
+    margin-right: 20px;
 }
 .items-1 .recepies{
     overflow: scroll;
