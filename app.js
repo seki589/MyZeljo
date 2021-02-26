@@ -28,14 +28,16 @@ theButton.forEach(button => {
     button.addEventListener('click', () => {
         const recepiesSrc = button.closest(".items-1 ");
         const recepies = recepiesSrc.querySelector('.hide');
-        recepies.classList.toggle('open-tab')  
+        recepies.classList.toggle('open-tab');
+        document.body.style.overflow = `hidden`;  
     })
 })
 closeBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
         const recepiesSrc = btn.closest(".items-1 ");
         const recepies = recepiesSrc.querySelector('.hide');
-        recepies.classList.toggle('open-tab')   
+        recepies.classList.toggle('open-tab');
+        document.body.style.overflow = '';   
     })
 })
 
