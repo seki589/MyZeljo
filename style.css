@@ -866,9 +866,23 @@ body{
       width: 90px;
   }
   .top1 .logo1{
-    padding: 50px 0;
+    padding-top: 50px;
     margin-right: 50px;
     flex: 1;
+  }
+  .icon{
+      padding-top: 5px;
+      display: flex;
+  }
+  .icon img{
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      filter: grayscale(0);
+      transition: .3s ease;
+  }
+  .icon img:hover{
+      filter: grayscale(1);
   }
   .logo1 p{
     font-size: 14px;
