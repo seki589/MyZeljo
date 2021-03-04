@@ -144,7 +144,7 @@ body{
     flex-direction: column;
     margin: auto;
     position: relative;
-    background-image: url(images/pita-baner.jpg);
+    background-image: url(images/pita-baner-2.jpg);
     background-size: cover;
     background-position: center;
     z-index: 2;
@@ -173,6 +173,9 @@ body{
     color: white;
     font-size: 25px;
     margin-bottom: 60px;
+}
+.main a{
+    font-size: 20px;
 }
 .btn{
     background-color: orange;
@@ -329,7 +332,7 @@ body{
     flex-direction: column;
     margin: auto;
     position: relative;
-    background-image: url(images/baner-2_720.png);
+    background-image: url(images/baner-3.jpg);
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -350,6 +353,8 @@ body{
 }
 .box .items{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 20px;
 }
 .box h3{
@@ -398,7 +403,6 @@ body{
 .box2{
     min-width: 300px;
     padding: 80px 20px;
-    margin-bottom: 60px;
 }
 .box2 h3{
     font-family: "Oswald";
@@ -417,12 +421,59 @@ body{
 }
 .box2 p{
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
 }
-.box2 div{
-    margin-top: 200px;
+.box2 .btn{
+    margin-top: 20px;
 }
+.bot .item-2{
+    width: 140px;
+    height: 270px;
+    margin: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    overflow: hidden;
+}
+.bot .item-2 img{
+    width: 140px;
+    height: 210px;
+}
+.bot .item-2 .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.item-2:hover .name{
+    transform: translateY(-30px);
+    padding: 5px;
+    transition:all cubic-bezier(0.67,-0.84, 0.24, 1.65) 1s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.item-2:hover img{
+    transform: scale(1.05);
+    opacity: .5;
+    transition: 1s ease;
+}
+.name h4{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.name p{
+    font-family: "Oswald";
+    font-size: 13px;
+    color: #d89b00;
+    padding-bottom: 5px;
+}
+.item-2:hover p{
+    color: #777;
+    border-bottom: 1px solid #d89b00;
+    transition: 1s ease;
+}
+/* .box2 div{
+    margin-top: 200px;
+} */
 .app{
     display: flex;
     flex: 1;
@@ -506,8 +557,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-
     width: 70%;
     margin-top: 20px;
     margin-bottom: 80px;
@@ -921,6 +972,22 @@ body{
     flex: 1;
     display: none;
   }
+  .open{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+  }
+  .open:hover img{
+      transform: scale(2) translateX(30px);
+      opacity: 1;
+      transition: .3s ease;
+  }
+  .open img{
+      width: 100px;
+      border-radius: 3px;
+      opacity: .4;
+      transform: translateX(10px);
+  }
   .open h2{
     font-size: 14px;
     color: black;
@@ -975,7 +1042,7 @@ body{
 
   #cookies{
       position: fixed;
-      display: flex;
+      display: none;
       align-items: center;
       background-color: royalblue;
       bottom: 0;
@@ -1024,6 +1091,7 @@ body{
         font-size: 35px;
         margin-bottom: 120px;
     }
+    
     .items-1 .hide{
         width: 90%;
         margin-top: 0px;
@@ -1117,9 +1185,10 @@ body{
     .box2{
         padding: 80px;
     }
-    .store{
-        /* margin-bottom: -60px; */
+    .bot .item-2{
+        margin: 10px;
     }
+
     .store a{
         font-size: 18px;
         padding: 5px 10px;
