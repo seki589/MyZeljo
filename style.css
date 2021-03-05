@@ -592,7 +592,7 @@ body{
 /* End Media */
 /* Who are we */
 #whoAreWe{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     background-color: white;
 }
@@ -606,10 +606,14 @@ body{
     margin: 10px;
     overflow: hidden;
     min-width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
 .container img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.05);
+    background-size: cover;
     transition: .5s ease;
 }
 .container:hover img{
@@ -624,24 +628,23 @@ body{
     position: absolute;
     left: 10px;
     right: 10px;
-    bottom: -52%;
-    height: 75%;
+    bottom: -53%;
+    height: 70%;
     padding: 10px;
     background: rgba(255, 255, 255, 0.9);
     z-index: 2;
     text-align: center;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     transition: .8s ease;
 }
 .topleft h2{
-    font-size: 45px;
-    font-style: italic;
+    font-size: 35px;
     font-weight: 300;
     color: #555;
     margin-bottom: 10px;
 }
 .topleft p{
-    font-size: 14px;
+    font-size: 10px;
 }
 /* End Who are we */
 /* Blog */
@@ -854,13 +857,10 @@ body{
     padding: 30px 0;
     border-top: 1px solid #ccc;
 }
-  
-
-  
+   
 .tabset {
     max-width: 65em;
 }
-
 
 .impresum h1{
     font-family:"Oswald";
@@ -993,7 +993,8 @@ body{
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding: 70px 20px 10px 20px;
+    align-items: center;
+    padding: 70px 2% 10px 2%;
     background-image: url(images/footer.jpg);
     z-index: 1;
 }
@@ -1012,11 +1013,10 @@ body{
     font-size: 40px;
     font-weight: bold;
     color: black;
-    margin-left: 50px;
 }
 .name-impresum .btn{
     font-size: 30px;
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 .tab-impresum{
     overflow-y: scroll;
@@ -1299,6 +1299,7 @@ textarea {
     #delivery,
     #app,
     #media,
+    #whoAreWe,
     #blog,
     .police,
     #footer2{
@@ -1323,14 +1324,8 @@ textarea {
         margin-bottom: 120px;
     }
 
-    .bot .item-2{
-        width: 200px;
-        height: 320px;
-        margin: 10px;
-    }
-    .bot .item-2 img{
-        width: 200px;
-        height: 270px;
+    .topleft p{
+        font-size: 14px;
     }
     .items-1 .hide{
         width: 90%;
@@ -1411,6 +1406,21 @@ textarea {
     .top ul a{
         font-size: 16px;
         padding: 10px;
+    }
+    .bot .item-2{
+        width: 200px;
+        height: 330px;
+        margin: 10px;
+    }
+    .bot .item-2 img{
+        width: 200px;
+        height: 270px;
+    }
+    .name h4{
+        font-size: 15px;
+    }
+    .name p{
+        font-size: 14px;
     }
     .app .box{
         margin: auto;
