@@ -605,7 +605,7 @@ body{
     position: relative;
     margin: 10px;
     overflow: hidden;
-    min-width: 400px;
+    min-width: 350px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
@@ -633,15 +633,18 @@ body{
     padding: 10px;
     background: rgba(255, 255, 255, 0.9);
     z-index: 2;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 5px 5px 0px 0px;
     transition: .8s ease;
 }
 .topleft h2{
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 300;
     color: #555;
     margin-bottom: 10px;
+    border-bottom: 1px solid orange;
 }
 .topleft p{
     font-size: 10px;
@@ -780,7 +783,7 @@ body{
     width: 100%;
     margin: auto;
     height: 60vh;
-    padding:0 5%;
+    padding: 20px 10px;
     overflow-y: scroll;
     box-shadow: inset 0 0 10px #000000;
     background-color: white;
@@ -789,6 +792,9 @@ body{
     transform:translateY(-60vh) ;
     z-index: -100;
     margin-bottom: -60vh;
+}
+#police .impresum{
+    margin-left: 3%;
 }
 .open{
     transform-origin: bottom;
@@ -854,7 +860,7 @@ body{
 }
   
 .tab-panel {
-    padding: 30px 0;
+    padding: 30px 0px;
     border-top: 1px solid #ccc;
 }
    
@@ -1323,7 +1329,9 @@ textarea {
         font-size: 35px;
         margin-bottom: 120px;
     }
-
+    .topleft h2{
+        font-size: 35px;
+    }
     .topleft p{
         font-size: 14px;
     }
