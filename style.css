@@ -457,12 +457,12 @@ body{
     transition: 1s ease;
 }
 .name h4{
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 5px;
 }
 .name p{
     font-family: "Oswald";
-    font-size: 13px;
+    font-size: 12px;
     color: #d89b00;
     padding-bottom: 5px;
 }
@@ -471,9 +471,7 @@ body{
     border-bottom: 1px solid #d89b00;
     transition: 1s ease;
 }
-/* .box2 div{
-    margin-top: 200px;
-} */
+
 .app{
     display: flex;
     flex: 1;
@@ -592,6 +590,60 @@ body{
     width: 120px;
 }
 /* End Media */
+/* Who are we */
+#whoAreWe{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+#whoAreWe .bot{
+    display: flex;
+    margin-top: 50px;
+}
+.container{
+    flex: 1;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    min-width: 400px;
+    cursor: pointer;
+}
+.container img{
+    width: 100%;
+    transition: .5s ease;
+}
+.container:hover img{
+    transform: scale(1.2);
+    transition: .8s ease;
+}
+.container:hover .topleft{
+    bottom: 0%;
+    background: rgba(255, 255, 255, 0.6);
+}
+.topleft{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -52%;
+    height: 75%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    transition: .8s ease;
+}
+.topleft h2{
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 10px;
+}
+.topleft p{
+    font-size: 14px;
+}
+/* End Who are we */
 /* Blog */
 #blog{
     width: 100%;
@@ -720,13 +772,13 @@ body{
 }
 
 /* End Blog */
-/* Impresum */
+/* Police */
 .police{
     width: 100%;
     margin: auto;
     height: 60vh;
     padding:0 5%;
-    overflow: scroll;
+    overflow-y: scroll;
     box-shadow: inset 0 0 10px #000000;
     background-color: white;
     transition: .5s ease-in;
@@ -743,20 +795,73 @@ body{
     margin-bottom: 0;
 }
 
-.impresum{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 5%;
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+  
+.tabset .tab-panel {
+    display: none;
+}
+  
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+}
+  
+.tabset > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+  
+.tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #8d8d8d;
+}
+  
+.tabset > label:hover,
+.tabset > input:focus + label {
+    color: #d89b00;
+}
+  
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+    background: #d89b00;
+}
+  
+.tabset > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+}
+  
+.tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+  
+
+  
+.tabset {
+    max-width: 65em;
 }
 
 
-.impresum div{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
 .impresum h1{
     font-family:"Oswald";
     font-size:30px;
@@ -775,7 +880,7 @@ body{
 .impresum span{
     font-weight: bold;
 }
-/* End Impresum */
+/* End Police */
 /* Footer */
 #footer{
     width: 100%;
@@ -868,6 +973,155 @@ body{
     color: white;
     padding:10px 20px;
 }
+
+/* End Footer */
+/* Impresum */
+#impresum{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 5%;
+    bottom:-150%;
+    width: 90%;
+    margin: auto;
+    transition: .5s ease;
+    background-color: white;
+    z-index: 2;
+}
+.name-impresum{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 70px 20px 10px 20px;
+    background-image: url(images/footer.jpg);
+    z-index: 1;
+}
+.name-impresum::after{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.name-impresum h2{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-left: 50px;
+}
+.name-impresum .btn{
+    font-size: 30px;
+    padding: 0px 20px;
+}
+.tab-impresum{
+    overflow-y: scroll;
+    margin-top: 40px;
+}
+.tab-impresum h4{
+    color: #555;
+    font-weight: 300;
+}
+.tab-impresum h5{
+    color: #555;
+    font-weight: 300;
+}
+.tab-impresum a{
+    text-decoration: none;
+    color: #555;
+    transition: .5s ease;
+}
+.tab-impresum a:hover{
+    border-bottom: 1px solid #555;
+    
+}
+ .tab-impresum .top1 div{
+    margin:50px auto;
+    line-height: 2.5;
+}
+form {
+     max-width:350px;
+      
+      
+}
+.feedback-input {
+    color:black;
+    font-weight:300;
+    font-size: 16px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:1px solid #888;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    caret-color: black;
+    outline:0;
+}
+  
+.feedback-input:focus { border:1px solid #ffb732; }
+  
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+  
+[type="submit"] {
+    width: 100%;
+    background:#ffa500;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+  [type="submit"]:hover { 
+      background:#ffb732; 
+}
+.tab-impresum .bot1{
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+    padding: 0 6%;
+}
+.tab-impresum .bot1 div{
+    margin-bottom: 15px;
+}
+/* End Impresum */
+/* Footer2 */
+#footer2{
+    display: flex;
+    flex-direction: column; 
+    background-image: url(images/footer.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    z-index: 0;
+}
+#footer2::after{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+}
 .up{
     position: fixed;
     bottom: 15px;
@@ -893,43 +1147,20 @@ body{
 .up:hover{
     opacity: 1;
 }
-/* End Footer */
-/* Footer2 */
-#footer2{
-    display: flex;
-    flex-direction: column; 
-    background-image: url(images/footer.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    margin: auto;
-    z-index: 0;
-}
-#footer2::after{
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: -1;
-}
-   .top1 {
+.top1 {
     display: flex;
     flex-direction: row;
     margin: 0% 6%;
-  }
-  .logo1 img{
+}
+.logo1 img{
       height: 80px;
       width: 90px;
-  }
-  .top1 .logo1{
+}
+.top1 .logo1{
     padding-top: 50px;
     margin-right: 50px;
     flex: 1;
-  }
+}
   .icon{
       padding-top: 5px;
       display: flex;
@@ -986,6 +1217,7 @@ body{
       width: 100px;
       border-radius: 3px;
       opacity: .4;
+      margin-top: 5px;
       transform: translateX(10px);
   }
   .open h2{
@@ -1061,7 +1293,6 @@ body{
     #header{
         right: 5%;
         left: 5%;
-        max-width: 1300px;
     }
     #main,
     #menu,
@@ -1091,7 +1322,16 @@ body{
         font-size: 35px;
         margin-bottom: 120px;
     }
-    
+
+    .bot .item-2{
+        width: 200px;
+        height: 320px;
+        margin: 10px;
+    }
+    .bot .item-2 img{
+        width: 200px;
+        height: 270px;
+    }
     .items-1 .hide{
         width: 90%;
         margin-top: 0px;
@@ -1203,10 +1443,6 @@ body{
     }
     .media img{
         width: 150px;
-    }
-    .impresum div{
-        display: flex;
-        flex-wrap: nowrap;
     }
     .us .btn{
         font-size: 15px;

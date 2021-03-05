@@ -9,6 +9,8 @@ const police = document.querySelector('.police');
 const private = document.querySelector('.rght');
 const theButton = document.querySelectorAll('[data-cmd]');
 const closeBtn = document.querySelectorAll('.hide .btn');
+const impresum = document.querySelector('.impresumBtn');
+const impresumBtn = document.querySelector('.name-impresum .btn')
 const ok = document.querySelector('#cookies .btn');
 
 
@@ -62,6 +64,16 @@ opButton.addEventListener('click', () => {
 ok.addEventListener('click', () =>{
     document.getElementById('cookies').style.bottom = "-200px";
 })
+
+impresum.addEventListener('click', () => {
+    document.getElementById("impresum").style.bottom = '0%';
+    document.body.style.overflow = `hidden`;
+})
+impresumBtn.addEventListener('click', () => {
+    document.getElementById("impresum").style.bottom = '-150%';
+    document.body.style.overflow = ``;
+})
+
 
 document.addEventListener('scroll', () => {
     var scroll_position = window.scrollY;
