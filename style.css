@@ -1223,6 +1223,7 @@ textarea {
   }
   .open img{
       width: 100px;
+      height: 60px;
       border-radius: 3px;
       opacity: .4;
       margin-top: 5px;
