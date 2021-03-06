@@ -377,6 +377,7 @@ body{
 }
 .items img{
     width: 70px;
+    height: 70px;
     margin-right: 30px;
 }
 /* End Delivery */
@@ -588,6 +589,7 @@ body{
 }
 .media img{
     width: 120px;
+    height: 120px;
 }
 /* End Media */
 /* Who are we */
